@@ -1,7 +1,6 @@
 package com.example.productcategoryapp;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class modelProduct {
 
@@ -9,23 +8,16 @@ public class modelProduct {
     String name;
     String description;
     float price;
-    LocalDate expery_date;
+    LocalDate expiry_date;
 
-    public modelProduct(int id, String name, String description, float price, LocalDate expery_date) {
-        this.id = id;
+    public modelProduct( String name, String description, float price, LocalDate expiry_date) {
         this.name = name;
         this.description = description;
         this.price = price;
-        this.expery_date = expery_date;
+        this.expiry_date = expiry_date;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -51,11 +43,11 @@ public class modelProduct {
         this.price = price;
     }
 
-    public LocalDate getExpery_date() {
-        return expery_date;
+    public LocalDate getExpiry_date() {
+        return expiry_date;
     }
 
-    public void setExpery_date(LocalDate expery_date) {
-        this.expery_date = expery_date;
+    public void setExpery_date(LocalDate expiry_date) {
+        this.expiry_date = expiry_date;
     }
 }
