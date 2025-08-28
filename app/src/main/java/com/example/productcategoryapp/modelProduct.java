@@ -1,23 +1,19 @@
 package com.example.productcategoryapp;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class modelProduct {
+public class modelProduct implements Serializable {
+    private String name;
+    private String description;
+    private String price;
+    private String expiry_date;
 
-    int id;
-    String name;
-    String description;
-    float price;
-    LocalDate expiry_date;
-
-    public modelProduct( String name, String description, float price, LocalDate expiry_date) {
+    public modelProduct(String name, String description, String price, String expiry_date) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.expiry_date = expiry_date;
     }
-
-
 
     public String getName() {
         return name;
@@ -35,19 +31,19 @@ public class modelProduct {
         this.description = description;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public LocalDate getExpiry_date() {
+    public String getExpiry_date() {
         return expiry_date;
     }
 
-    public void setExpery_date(LocalDate expiry_date) {
+    public void setExpiry_date(String expiry_date) {
         this.expiry_date = expiry_date;
     }
 }
