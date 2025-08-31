@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements Adapter_Product.O
     private FloatingActionButton fabBtn;
     private TextView emptytext;
 
-    private List<modelProduct> productList = new ArrayList<>();
+    private final List<modelProduct> productList = new ArrayList<>();
     private Adapter_Product adapterProduct;
     private ActivityResultLauncher<Intent> addProductLauncher;
 

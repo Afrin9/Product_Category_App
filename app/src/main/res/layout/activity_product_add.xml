@@ -14,9 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#8169C3"
-        android:paddingTop="15dp"
+        android:paddingTop="30dp"
+        app:titleTextColor="@color/black"
         app:logo="@drawable/logo"
         app:title="Add Product" />
+
+    <TextView
+        android:id="@+id/productDts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Details"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_above="@+id/cardview" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -39,8 +50,8 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Product Name"
                 android:background="@drawable/edit_text"
+                android:hint="Product Name"
                 android:inputType="text"
                 android:padding="12dp" />
 

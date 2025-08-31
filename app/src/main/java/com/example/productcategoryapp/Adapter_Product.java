@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class Adapter_Product extends RecyclerView.Adapter<Adapter_Product.ProductViewHolder> {
-    private List<modelProduct> localproductsList;
-    private OnItemClickListener itemClickListener;
-    private Context context;
+    private final List<modelProduct> localproductsList;
+    private final OnItemClickListener itemClickListener;
+    private final Context context;
 
     public interface OnItemClickListener {
         void onItemClick(modelProduct product);

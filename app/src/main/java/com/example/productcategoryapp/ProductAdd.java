@@ -5,11 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,9 +40,20 @@ public class ProductAdd extends AppCompatActivity {
         Expiry_Date = findViewById(R.id.Expiry_Date);
         price =findViewById(R.id.price);
 
+
         addBtn.setOnClickListener(view -> saveProduct());
         Expiry_Date.setInputType(InputType.TYPE_NULL);
         Expiry_Date.setFocusable(false);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+
+
 
         Expiry_Date.setOnClickListener(v -> {
             final Calendar cldr = Calendar.getInstance();
@@ -56,6 +70,15 @@ public class ProductAdd extends AppCompatActivity {
                     }, year, month, day);
             picker.show();
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // or onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void saveProduct(){
