@@ -5,25 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="30dp"
+    android:orientation="vertical"
     tools:context=".ProductAdd">
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#8169C3"
-            app:logo="@drawable/logo"
-            app:title="Add Product" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8169C3"
+        android:paddingTop="15dp"
+        app:logo="@drawable/logo"
+        app:title="Add Product" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#DEC7FB"
+        app:cardCornerRadius="10dp"
+        app:contentPadding="10dp">
 
         <LinearLayout
             android:id="@+id/linerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@+id/toolbar"
-            android:layout_margin="8dp">
+            android:layout_margin="15dp"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/name"
@@ -31,57 +41,49 @@
                 android:layout_height="wrap_content"
                 android:hint="Product Name"
                 android:background="@drawable/edit_text"
-                android:layout_margin="3dp"
                 android:inputType="text"
-                android:padding="5dp"
-                />
+                android:padding="12dp" />
 
             <EditText
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description..."
+                android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text"
-                android:layout_margin="3dp"
+                android:hint="Description..."
                 android:inputType="textMultiLine"
-                android:minLines="3"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                />
+                android:padding="12dp" />
 
             <EditText
                 android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Price"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text"
-                android:layout_margin="3dp"
+                android:hint="Price"
                 android:inputType="numberDecimal"
-                android:padding="5dp"
-                />
+                android:padding="12dp" />
 
             <EditText
                 android:id="@+id/Expiry_Date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Expiry Date (MM/DD/YYYY)"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text"
-                android:layout_margin="3dp"
+                android:hint="Expiry Date (MM/DD/YYYY)"
                 android:inputType="date"
-                android:padding="5dp"
-                />
-
-            <Button
-                android:id="@+id/addBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADD Product"
-                android:layout_marginStart="8dp" />
+                android:padding="12dp" />
 
         </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
-
-
-
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:text="ADD Product" />
 </RelativeLayout>

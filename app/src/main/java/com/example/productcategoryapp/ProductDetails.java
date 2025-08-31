@@ -32,10 +32,10 @@ public class ProductDetails extends AppCompatActivity {
         modelProduct product = (modelProduct) getIntent().getSerializableExtra("product");
 
         if(product!= null){
-            nameD.setText("Name: "+product.getName());
-            descriptionD.setText("Description: "+product.getDescription());
+            nameD.setText(product.getName());
+            descriptionD.setText(product.getDescription());
             priceD.setText("Price: "+product.getPrice()+"$");
-            Expiry_DateD.setText("Expiry Date: " + product.getExpiry_date());
+            Expiry_DateD.setText( product.getExpiry_date());
         }
 
     }
