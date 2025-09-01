@@ -3,6 +3,7 @@ package com.example.productcategoryapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements Adapter_Product.O
 
     private RecyclerView recyclerView;
     private FloatingActionButton fabBtn;
-    private TextView emptytext;
+    private LinearLayout emptytext;
 
     private final List<modelProduct> productList = new ArrayList<>();
     private Adapter_Product adapterProduct;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements Adapter_Product.O
 
         fabBtn = findViewById(R.id.fabBtn);
         recyclerView = findViewById(R.id.recyclerView);
-        emptytext = findViewById(R.id.emptytext);
+        emptytext = findViewById(R.id.emptyState);
 
 
         adapterProduct = new Adapter_Product(productList, this, this);
