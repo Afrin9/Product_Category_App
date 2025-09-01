@@ -20,11 +20,6 @@ public class ProductDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_product_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         nameD = findViewById(R.id.nameD);
         descriptionD = findViewById(R.id.descriptionD);
@@ -46,7 +41,7 @@ public class ProductDetails extends AppCompatActivity {
         if(product!= null){
             nameD.setText(product.getName());
             descriptionD.setText(product.getDescription());
-            priceD.setText("Price: "+product.getPrice()+"$");
+            priceD.setText("$" +product.getPrice());
             Expiry_DateD.setText( product.getExpiry_date());
         }
 

@@ -14,99 +14,95 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#8169C3"
-        app:logo="@drawable/logo"
         android:paddingTop="30dp"
+        app:logo="@drawable/logo"
         app:title="Product Details" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
         <LinearLayout
-            android:id="@+id/linerLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_gravity="center"
-            android:background="@drawable/edit_text"
-            android:layout_below="@+id/toolbar"
-            android:padding="12dp"
-            android:layout_margin="18dp">
+            android:padding="24dp">
 
 
-                <TextView
-                    android:id="@+id/nameD"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="name"
-                    android:textColor="#900350"
-                    android:textSize="28dp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/nameD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textAlignment="center"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
-
-
-
-                        <TextView
-                            android:id="@+id/priceD"
-                            android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:padding="3dp"
-                            android:text="Price" />
-
+            <TextView
+                android:id="@+id/priceD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="$29.99"
+                android:textAlignment="center"
+                android:textColor="#6200EE"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:text="Expiry Date: "
-                    android:textColor="@color/black"/>
+                    android:layout_weight="1"
+                    android:text="Expiry Date:"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Expiry_DateD"
-                    android:layout_weight="3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
                     android:text="12/05/2025"
-                    android:layout_margin="3dp"
-                    android:padding="5dp"
-                    />
-
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
             </LinearLayout>
 
-            <LinearLayout
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#EEEEEE" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:text="Description: "
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:text="Description: "
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/descriptionD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#333333"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/descriptionD"
-                    android:layout_weight="3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:padding="5dp"
-                    android:text="asdfghjkl"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="5dp"
-                    />
-            </LinearLayout>
-
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements Adapter_Product.O
         recyclerView = findViewById(R.id.recyclerView);
         emptytext = findViewById(R.id.emptytext);
 
-        // Initialize adapter with click listener
+
         adapterProduct = new Adapter_Product(productList, this, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapterProduct);
@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements Adapter_Product.O
         }
     }
 
-    // Handle item clicks from the adapter
     @Override
     public void onItemClick(modelProduct product) {
         // Launch ProductDetailActivity with the clicked product

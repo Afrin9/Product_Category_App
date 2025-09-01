@@ -39,10 +39,9 @@ public class Adapter_Product extends RecyclerView.Adapter<Adapter_Product.Produc
         modelProduct product = localproductsList.get(position);
         holder.name.setText(product.getName());
         holder.description.setText(product.getDescription());
-        holder.price.setText("Price: "+ product.getPrice());
-        holder.expiry_date.setText("Expiry: "+ product.getExpiry_date());
+        holder.price.setText("$"+ product.getPrice());
+        holder.expiry_date.setText(product.getExpiry_date());
 
-        // Set click listener on the item view
         holder.itemView.setOnClickListener(v -> {
             if (itemClickListener != null) {
                 itemClickListener.onItemClick(product);

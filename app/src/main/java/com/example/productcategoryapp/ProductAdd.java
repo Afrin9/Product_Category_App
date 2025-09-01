@@ -45,6 +45,7 @@ public class ProductAdd extends AppCompatActivity {
         Expiry_Date.setInputType(InputType.TYPE_NULL);
         Expiry_Date.setFocusable(false);
 
+        //--------- back button-----------
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -52,6 +53,7 @@ public class ProductAdd extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+        //-----------back button-------------
 
 
 
